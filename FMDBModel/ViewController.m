@@ -29,24 +29,23 @@
 //    [model insertIntoTableName:@"temp1" maker:^(LXQFMDBMaker *maker) {
 //        maker.columnName(@"name").values(@"Lixingqiao");
 //        maker.columnName(@"age").values(@24);
-////        maker.SQLOG();
 //        maker.insert();
 //    }];
-//    [model selectFromTableName:@"temp1" maker:^(LXQFMDBMaker *maker) {
-//        maker.columnName(@"name");
-////        maker.where(@"name").equalTo(@"Lixingqiao").OR().where(@"age").greateThanOrEqualTo(@"24");
-//        maker.select();
-//    }];
+    [model selectFromTableName:@"temp1" maker:^(LXQFMDBMaker *maker) {
+        maker.columnName(@"name");
+        maker.where(@"name").equalTo(@"Lixingqiao").OR().where(@"age").greateThanOrEqualTo(@"24");
+        maker.select();
+    }];
     
 //    [model deleteFromTableName:@"temp" maker:^(LXQFMDBMaker *maker) {
 //        maker.where(@"name").equalTo(@"Lixingqiao");
 //        maker.Delete();
 //    }];
-    [model updateWithTableName:@"temp1" maker:^(LXQFMDBMaker *maker) {
-        maker.set(@"name").assignment(@"liujing");
-        maker.where(@"age").equalTo(@"24");
-        maker.update();
-    }];
+//    [model updateWithTableName:@"temp1" maker:^(LXQFMDBMaker *maker) {
+//        maker.set(@"name").assignment(@"liujing");
+//        maker.where(@"age").equalTo(@"24");
+//        maker.update();
+//    }];
 }
 
 
