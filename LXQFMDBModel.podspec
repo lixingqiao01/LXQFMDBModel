@@ -3,11 +3,11 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "操作简单,扩展性强,直接操作model"
   s.homepage     = "https://github.com/lixingqiao01/LXQFMDBModel"
-  s.license      = "MIT"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "XingQiao Li" => "lixingqiao01@163.com" }
   s.ios.deployment_target = "7.0"
   s.source       = { :git => "https://github.com/lixingqiao01/LXQFMDBModel.git", :tag => s.version }
-  s.source_files = "LXQFMDBModel/FMDBModel/FMDBModel/*.{h,m}"
+  s.source_files = "FMDBModel/FMDBModel/*.{h,m}"
   s.requires_arc = true
   s.dependency "FMDB"
 end
