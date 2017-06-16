@@ -16,8 +16,8 @@
 		EE0480F41EF2B1D00029B2E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0480F21EF2B1D00029B2E4 /* LaunchScreen.storyboard */; };
 		EE0480FF1EF2B1D00029B2E4 /* FMDBModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0480FE1EF2B1D00029B2E4 /* FMDBModelTests.m */; };
 		EE04810A1EF2B1D00029B2E4 /* FMDBModelUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0481091EF2B1D00029B2E4 /* FMDBModelUITests.m */; };
-		EE04811A1EF2B1EE0029B2E4 /* LXQFMDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0481191EF2B1EE0029B2E4 /* LXQFMDBModel.m */; };
-		EE04811D1EF2B2040029B2E4 /* LXQFMDBMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = EE04811C1EF2B2040029B2E4 /* LXQFMDBMaker.m */; };
+		EE6104131EF4234100D610D3 /* LXQFMDBMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6104101EF4234100D610D3 /* LXQFMDBMaker.m */; };
+		EE6104141EF4234100D610D3 /* LXQFMDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6104121EF4234100D610D3 /* LXQFMDBModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +57,10 @@
 		EE0481051EF2B1D00029B2E4 /* FMDBModelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMDBModelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0481091EF2B1D00029B2E4 /* FMDBModelUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBModelUITests.m; sourceTree = "<group>"; };
 		EE04810B1EF2B1D00029B2E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE0481181EF2B1EE0029B2E4 /* LXQFMDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXQFMDBModel.h; sourceTree = "<group>"; };
-		EE0481191EF2B1EE0029B2E4 /* LXQFMDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXQFMDBModel.m; sourceTree = "<group>"; };
-		EE04811B1EF2B2040029B2E4 /* LXQFMDBMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXQFMDBMaker.h; sourceTree = "<group>"; };
-		EE04811C1EF2B2040029B2E4 /* LXQFMDBMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXQFMDBMaker.m; sourceTree = "<group>"; };
+		EE61040F1EF4234100D610D3 /* LXQFMDBMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXQFMDBMaker.h; sourceTree = "<group>"; };
+		EE6104101EF4234100D610D3 /* LXQFMDBMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXQFMDBMaker.m; sourceTree = "<group>"; };
+		EE6104111EF4234100D610D3 /* LXQFMDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXQFMDBModel.h; sourceTree = "<group>"; };
+		EE6104121EF4234100D610D3 /* LXQFMDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXQFMDBModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 		EE0480E31EF2B1D00029B2E4 /* FMDBModel */ = {
 			isa = PBXGroup;
 			children = (
-				EE0481171EF2B1D70029B2E4 /* FMDBModel */,
+				EE61040E1EF4234100D610D3 /* FMDBModel */,
 				EE0480E71EF2B1D00029B2E4 /* AppDelegate.h */,
 				EE0480E81EF2B1D00029B2E4 /* AppDelegate.m */,
 				EE0480EA1EF2B1D00029B2E4 /* ViewController.h */,
@@ -171,15 +171,15 @@
 			path = FMDBModelUITests;
 			sourceTree = "<group>";
 		};
-		EE0481171EF2B1D70029B2E4 /* FMDBModel */ = {
+		EE61040E1EF4234100D610D3 /* FMDBModel */ = {
 			isa = PBXGroup;
 			children = (
-				EE0481181EF2B1EE0029B2E4 /* LXQFMDBModel.h */,
-				EE0481191EF2B1EE0029B2E4 /* LXQFMDBModel.m */,
-				EE04811B1EF2B2040029B2E4 /* LXQFMDBMaker.h */,
-				EE04811C1EF2B2040029B2E4 /* LXQFMDBMaker.m */,
+				EE61040F1EF4234100D610D3 /* LXQFMDBMaker.h */,
+				EE6104101EF4234100D610D3 /* LXQFMDBMaker.m */,
+				EE6104111EF4234100D610D3 /* LXQFMDBModel.h */,
+				EE6104121EF4234100D610D3 /* LXQFMDBModel.m */,
 			);
-			name = FMDBModel;
+			path = FMDBModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,11 +369,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE04811A1EF2B1EE0029B2E4 /* LXQFMDBModel.m in Sources */,
 				EE0480EC1EF2B1D00029B2E4 /* ViewController.m in Sources */,
 				EE0480E91EF2B1D00029B2E4 /* AppDelegate.m in Sources */,
-				EE04811D1EF2B2040029B2E4 /* LXQFMDBMaker.m in Sources */,
 				EE0480E61EF2B1D00029B2E4 /* main.m in Sources */,
+				EE6104141EF4234100D610D3 /* LXQFMDBModel.m in Sources */,
+				EE6104131EF4234100D610D3 /* LXQFMDBMaker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +613,7 @@
 				EE0481101EF2B1D00029B2E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE0481111EF2B1D00029B2E4 /* Build configuration list for PBXNativeTarget "FMDBModelTests" */ = {
 			isa = XCConfigurationList;
@@ -621,6 +622,7 @@
 				EE0481131EF2B1D00029B2E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE0481141EF2B1D00029B2E4 /* Build configuration list for PBXNativeTarget "FMDBModelUITests" */ = {
 			isa = XCConfigurationList;
@@ -629,6 +631,7 @@
 				EE0481161EF2B1D00029B2E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
