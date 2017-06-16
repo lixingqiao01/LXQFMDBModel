@@ -7,6 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { "XingQiao Li" => "lixingqiao01@163.com" }
   s.ios.deployment_target = "7.0"
   s.source       = { :git => "https://github.com/lixingqiao01/LXQFMDBModel.git", :tag => s.version }
-  s.source_files = "FMDBModel/FMDBModel/*.{h,m}"
+  s.source_files = "LXQFMDBModel/FMDBModel/FMDBModel/*.{h,m}"
   s.requires_arc = true
+  s.dependency "FMDB"
 end
