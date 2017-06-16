@@ -66,4 +66,12 @@
     maker.db = self.db;
     block(maker);
 }
+
+- (void)updateWithTableName:(NSString *)tableName maker:(void (^)(LXQFMDBMaker *))block{
+    LXQFMDBMaker *maker = [[LXQFMDBMaker alloc]init];
+    maker.sql = [NSString stringWithFormat:@"UPDATE %@",tableName];
+    maker.db = self.db;
+    block(maker);
+    
+}
 @end

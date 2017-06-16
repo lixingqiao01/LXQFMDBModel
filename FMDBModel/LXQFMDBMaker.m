@@ -13,6 +13,7 @@
 @property (nonatomic, copy)     NSString            *columnStr;
 @property (nonatomic, copy)     NSString            *valuesStr;
 @property (nonatomic, copy)     NSString            *whereStr;
+@property (nonatomic, copy)     NSString            *setStr;
 
 @end
 
@@ -226,6 +227,44 @@
         } else {
             NSLog(@"删除失败");
         }
+        return self;
+    };
+}
+
+- (LXQFMDBMaker *(^)(NSString *))set{
+    return ^(NSString *columnName){
+        self.setStr = [NSString stringWithFormat:@"SET %@",columnName];
+        return self;
+    };
+}
+
+- (LXQFMDBMaker *(^)(id))assignment{
+    return ^(id values){
+        self.setStr = [NSString stringWithFormat:@"%@ = '%@'",self.setStr,values];
+        return self;
+    };
+}
+
+- (LXQFMDBMaker *(^)())update{
+    return ^(){
+        NSMutableString *sql;
+        if (self.setStr && self.whereStr) {
+            //UPDATE tableName SET name = liujing WHERE address == guiyang
+            /*
+             maker.set("name").equalTo("liujing").where("address").equalTo("guiyang");
+             */
+            sql = [NSMutableString stringWithFormat:@"%@ %@ %@",self.sql,self.setStr,self.whereStr];
+        } else {
+            NSAssert(0, @"setStr/whereStr不能为空");
+        }
+        NSLog(@"%@",sql);
+        BOOL result = [self.db executeUpdate:sql];
+        if (result) {
+            NSLog(@"数据修改成功");
+        } else {
+            NSLog(@"数据修改失败");
+        }
+//        NSMutableString *sql = [NSMutableString]
         return self;
     };
 }

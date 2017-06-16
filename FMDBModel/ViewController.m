@@ -38,9 +38,14 @@
 //        maker.select();
 //    }];
     
-    [model deleteFromTableName:@"temp" maker:^(LXQFMDBMaker *maker) {
-        maker.where(@"name").equalTo(@"Lixingqiao");
-        maker.Delete();
+//    [model deleteFromTableName:@"temp" maker:^(LXQFMDBMaker *maker) {
+//        maker.where(@"name").equalTo(@"Lixingqiao");
+//        maker.Delete();
+//    }];
+    [model updateWithTableName:@"temp1" maker:^(LXQFMDBMaker *maker) {
+        maker.set(@"name").assignment(@"liujing");
+        maker.where(@"age").equalTo(@"24");
+        maker.update();
     }];
 }
 

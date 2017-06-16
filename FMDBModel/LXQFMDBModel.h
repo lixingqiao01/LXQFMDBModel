@@ -49,4 +49,11 @@
  @param block 操作对象
  */
 - (void)deleteFromTableName:(NSString *)tableName maker:(void(^)(LXQFMDBMaker *maker))block;
+/**
+ 更新数据库中数据
+
+ @param tableName 需要更新数据的表名
+ @param block 操作对象
+ */
+- (void)updateWithTableName:(NSString *)tableName maker:(void(^)(LXQFMDBMaker *maker))block;
 @end

@@ -16,6 +16,7 @@ typedef void(^FMResultSetBlock)(FMResultSet *);
 @property (nonatomic, strong)       FMDatabase      *db;
 @property (nonatomic, copy)         NSString        *tableName;
 @property (nonatomic, assign)       FMResultSetBlock    resultBlock;
+//@property (nonatomic, getter=update)   void        update;
 
 #pragma mark - 三种基本数据格式
 - (LXQFMDBMaker *(^)())integer;
@@ -50,8 +51,10 @@ typedef void(^FMResultSetBlock)(FMResultSet *);
  */
 - (LXQFMDBMaker *(^)())create;
 - (LXQFMDBMaker *(^)(id))values;
+- (LXQFMDBMaker *(^)(NSString *))set;
+- (LXQFMDBMaker *(^)(id))assignment;
 - (LXQFMDBMaker *(^)())insert;
 - (LXQFMDBMaker *(^)())select;
-
 - (LXQFMDBMaker *(^)())Delete;
+- (LXQFMDBMaker *(^)())update;
 @end
