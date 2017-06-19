@@ -21,7 +21,7 @@
 
 - (LXQFMDBMaker *(^)())SQLOG{
     return ^(){
-        NSLog(@"\n sql == %@ \n columnStr == %@ \n valuesStr == %@",self.sql,self.columnStr,self.valuesStr);
+        //NSLog(@"\n sql == %@ \n columnStr == %@ \n valuesStr == %@",self.sql,self.columnStr,self.valuesStr);
         return self;
     };
 }
@@ -84,7 +84,7 @@
         NSMutableString *sql = [NSMutableString stringWithFormat:@"%@",self.sql];
         NSRange range = [sql rangeOfString:@"*"];
         [sql replaceCharactersInRange:range withString:self.columnStr];
-        NSLog(@"%@",sql);
+        //NSLog(@"%@",sql);
         BOOL result = [self.db executeUpdate:sql];
         if (result) {
         }
@@ -122,12 +122,12 @@
         [sql replaceCharactersInRange:range withString:self.columnStr];
         range = [sql rangeOfString:@"?"];
         [sql replaceCharactersInRange:range withString:self.valuesStr];
-        NSLog(@"sql == %@",sql);
+        //NSLog(@"sql == %@",sql);
         BOOL result = [self.db executeUpdate:sql];
         if (result) {
-            NSLog(@"插入成功");
+            //NSLog(@"插入成功");
         } else {
-            NSLog(@"插入失败");
+            //NSLog(@"插入失败");
         }
         return self;
     };
@@ -203,11 +203,12 @@
         if (self.whereStr && ![self.whereStr isEqualToString:@""]) {
             [sql insertString:[NSString stringWithFormat:@" %@",self.whereStr] atIndex:sql.length];
         }
-        NSLog(@"%@",sql);
+//        //NSLog(@"%@",sql);
         FMResultSet *set = [self.db executeQuery:sql];
-        while ([set next]) {
-            NSLog(@"%@",[set stringForColumn:@"name"]);
-        }
+        self.resultBlock(set);
+//        while ([set next]) {
+//            //NSLog(@"%@",[set stringForColumn:@"name"]);
+//        }
         return self;
     };
 }
@@ -220,12 +221,12 @@
         } else {
             sql = [NSMutableString stringWithFormat:@"%@",self.sql];
         }
-        NSLog(@"%@",sql);
+//        //NSLog(@"%@",sql);
         BOOL result = [self.db executeUpdate:sql];
         if (result) {
-            NSLog(@"删除成功");
+//            //NSLog(@"删除成功");
         } else {
-            NSLog(@"删除失败");
+//            //NSLog(@"删除失败");
         }
         return self;
     };
@@ -257,12 +258,12 @@
         } else {
             NSAssert(0, @"setStr/whereStr不能为空");
         }
-        NSLog(@"%@",sql);
+//        //NSLog(@"%@",sql);
         BOOL result = [self.db executeUpdate:sql];
         if (result) {
-            NSLog(@"数据修改成功");
+            //NSLog(@"数据修改成功");
         } else {
-            NSLog(@"数据修改失败");
+            //NSLog(@"数据修改失败");
         }
 //        NSMutableString *sql = [NSMutableString]
         return self;
