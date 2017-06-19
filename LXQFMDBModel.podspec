@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LXQFMDBModel"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "操作简单,扩展性强,直接操作model"
   s.homepage     = "https://github.com/lixingqiao01/LXQFMDBModel"
   s.license      = { :type => "MIT", :file => "LICENSE" }
