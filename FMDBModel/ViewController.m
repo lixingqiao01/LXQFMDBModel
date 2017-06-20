@@ -36,6 +36,15 @@
         maker.where(@"name").equalTo(@"Lixingqiao").OR().where(@"age").greateThanOrEqualTo(@"24");
         maker.select();
     }];
+    [model selectFromTableName:@"temp1" maker:^(LXQFMDBMaker *maker) {
+        maker.columnName(@"name");
+        maker.where(@"name").equalTo(@"Lixingqiao").OR().where(@"age").greateThanOrEqualTo(@"24");
+        maker.select();
+    } resultSet:^(FMResultSet *set) {
+        while ([set next]) {
+            //相关操作
+        }
+    }];
     
 //    [model deleteFromTableName:@"temp" maker:^(LXQFMDBMaker *maker) {
 //        maker.where(@"name").equalTo(@"Lixingqiao");
